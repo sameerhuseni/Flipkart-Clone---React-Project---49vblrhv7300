@@ -1,7 +1,7 @@
 
 # Flipkart Clone Front-end APP
 
-[Vivek's](https://github.com/tivivek/) Flipkart Clone is done with top-notch features for the entrepreneur startups like Flipkart.
+ Flipkart Clone is done with top-notch features for the entrepreneur startups like Flipkart.
 - It has a top notch user interface similar to Flipkart. 
 - It has login and logout feature.
 - It has product detal page
@@ -21,7 +21,7 @@
 
 ## 🚀 LIVE APP
 
-https://flipkart-clone-by-vivek.netlify.app/
+https://sameerhuseni.netlify.app/
 
 
 ##  🖥️ Tech Stack
@@ -40,11 +40,6 @@ https://flipkart-clone-by-vivek.netlify.app/
 
 ## Installation
 
-Clone the project
-
-```bash
-  git clone https://github.com/tivivek/Flipkart-Clone---React-Project---nzntghgnwsa5
-```
 
 Go to the project directory
 
@@ -75,7 +70,5 @@ To run this project, you will need to add the following environment variables to
 
 ##  👋 Contact Me
 
-If any query please contact on 
 
-[![linkedin](https://www.linkedin.com/in/er-vivektiwari/)
 
