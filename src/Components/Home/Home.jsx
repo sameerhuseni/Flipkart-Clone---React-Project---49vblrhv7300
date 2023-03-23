@@ -1,42 +1,32 @@
 import React from 'react'
-import Appliances from './homeComponents/Appliances'
-import Bestselling from './homeComponents/Bestselling'
-import Electronics from './homeComponents/Electronics'
-import Fashion from './homeComponents/Fashion'
-import FinalBanner from './homeComponents/FinalBanner'
-import Footer from '../Footer/Footer'
-import Groceries from './homeComponents/Groceries'
-import Mobile from './homeComponents/Mobile'
-import TopOffers from './homeComponents/TopOffers'
-import OfferBanner from './homeComponents/OfferBanner'
-import CategoryBar from './homeComponents/CategoryBar'
-import BannerOffer from './homeComponents/BannerOffer'
-import BannerOffer2 from './homeComponents/BannerOffer2'
-import BeforeFooter from './homeComponents/BeforeFooter'
-import { Box } from '@chakra-ui/react'
-import CategoryBarForMobile from './homeComponents/CategoryBarForMobile'
+import NavBar from './NavBar'
+import Banner from './Banner'
+import Slide from './Slide';
+import { Box, styled } from '@mui/material';
+import MidSlides from './MidSlides';
+import MidSection from './MidSection';
+
+const Component = styled(Box)({
+  padding: '10px',
+  background: '#F2F2F2'
+})
 
 const Home = () => {
+
+  return (
+    <>
+      <NavBar />
+      <Component>
+        <Banner />
+        <MidSlides title="Deal of the Day" timer={true} />
+        <MidSection />
+        <Slide title="Best Discounts for You" timer={false} utoPlay={false} />
+        <Slide title="Season's Top Pick" timer={false} utoPlay={false} />
+        
+      </Component>
+    </>
     
-    return (
-        <Box>
-            <CategoryBar />
-            <FinalBanner />
-            <CategoryBarForMobile />
-            <OfferBanner />
-            <BannerOffer />
-            <Fashion />
-            <Bestselling />
-            <Appliances />
-            <BannerOffer2 />
-            <TopOffers />
-            <Electronics />
-            <Groceries />
-            <Mobile />
-            <BeforeFooter />
-            {/* <Footer /> */}
-        </Box>
-    )
+  )
 }
 
 export default Home

@@ -1,48 +1,37 @@
-import { Box, useMediaQuery } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import './App.css';
-import AllRoutes from './Components/AllRoutes';
-import CartPage from './Components/Cart/CartPage';
-import Footer from './Components/Footer/Footer';
-import Home from './Components/Home/Home';
-import Navbar from './Components/Navbar/navbar';
-import Products from './Components/Products.jsx/Products';
-import Viewpage from './Components/ProductsView.jsx/Viewpage';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
+import { Box } from '@mui/material';
+
+import Header from './components/header/Header';
+
+import Home from './components/home/Home';
+import Cart from './components/cart/Cart'
+import DetailView from './components/details/DetailView';
+import Shipping from "./components/shipping/Shipping";
+import Context from "./context/Context";
+
+
+//=======================================function starts=======================================
 function App() {
-  // const location =useLocation();
-  // const [checkOtpPage, setCheckOtpPage] = useState(false);
-  // useEffect(()=>{
-  //   if(location.pathname==='/otp'){
-  //     setCheckOtpPage(true)
-  //     console.log(location.pathname, " loaction ");
-  //   }
-  // },[])
-  // console.log(location.pathname, " out from if loaction ");
-  const [isLargerThan720] = useMediaQuery('(min-width: 720px)')
-  // console.log(checkOtpPage, " checkOtpPage ");
+
   return (
-    <Box>
-      {/* {
-        checkOtpPage? "":<Navbar/>
-      }
-       */}
-      <Navbar/>
-      <AllRoutes/>
-      {/* <Home/> */}
-      {/* <Products/> */}
-      {/* <Viewpage/> */}
-      {/* <CartPage/> */}
-      {/* {
-        isLargerThan720? <Footer/> : ""
-      } */}
-      {/* {
-        checkOtpPage?"":
-      } */}
-      <Footer/>
-    </Box>
+    <Context>
+      <Router>
+        <Header />
+        <Box style={{ marginTop: 54 }}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/products/:id' element={<DetailView />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/shipping' element={<Shipping />} />
+          </Routes>
+        </Box>
+      </Router>
+    </Context>
   );
 }
 
 export default App;
+
